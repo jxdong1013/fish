@@ -1,0 +1,1 @@
+﻿alter table t_dict ADD pid int(11) default 0 COMMENT '父id';

@@ -1,0 +1,25 @@
+CREATE or REPLACE VIEW `v_callrecorddetail` AS select  a.*,
+  b.id as detailid,
+  b.no ,
+  b.nature,
+  b.brand ,
+  b.specification,
+  b.orderstate,
+  b.quoteprice,
+  b.weight,
+  b.saleprice,
+  b.paymethod,
+  b.payperiod,
+  b.domestic_tvn,
+  b.domestic_graypart,
+  b.domestic_sandsalt,
+  b.domestic_sour,
+  b.domestic_lysine,
+  b.domestic_amine,
+  b.domestic_aminototal,
+  b.domestic_methionine,
+  b.domestic_fat,
+  b.domestic_protein
+
+from t_callrecords a inner join t_callrecordsdetail b on a.id = b.callrecordid
+order by a.currentdate desc 
